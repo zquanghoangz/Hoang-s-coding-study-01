@@ -10,6 +10,7 @@ namespace FluentApiStudy
         private string _firstName;
         private string _lastName;
         private string _fullName;
+        private DateTime _birthDate;
 
         public string FirstName
         {
@@ -39,6 +40,16 @@ namespace FluentApiStudy
             set
             {
                 _fullName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public DateTime BirthDate
+        {
+            get { return _birthDate; }
+            set
+            {
+                _birthDate = value;
                 OnPropertyChanged();
             }
         }

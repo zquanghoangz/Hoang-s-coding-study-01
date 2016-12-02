@@ -48,12 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExpressionUtilities.cs" />
-    <Compile Include="NotifyPropertyChangedExtensions.cs" />
+    <Compile Include="PropertyChanged\NegativePropertyChangedExpectation.cs" />
+    <Compile Include="PropertyChanged\NotifyPropertyChangedExtensions.cs" />
     <Compile Include="Person.cs" />
-    <Compile Include="PersonTest.cs" />
+    <Compile Include="UnitTest\ArgumentValidationTests.cs" />
+    <Compile Include="UnitTest\BasicTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="PropertyChangedExpectation.cs" />
+    <Compile Include="PropertyChanged\PositivePropertyChangedExpectation.cs" />
+    <Compile Include="PropertyChanged\PropertyChangedExpectationBase.cs" />
+    <Compile Include="UnitTest\PositiveNegativeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

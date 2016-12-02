@@ -1,10 +1,11 @@
+using FluentApiStudy.PropertyChanged;
 using NUnit.Framework;
 using System;
 
-namespace FluentApiStudy
+namespace FluentApiStudy.UnitTest
 {
     [TestFixture]
-    public sealed class PersonTest
+    public sealed class BasicTest
     {
         [Test]
         public void SingleProperty_AssertFail()
@@ -19,7 +20,8 @@ namespace FluentApiStudy
 
             Assert.That(
                 ex.Message,
-                Is.EqualTo("Expected PropertyChanged event to fire for Person.FirstName."));
+                Is.EqualTo("Received notifications: (none). " +
+                "Expected Person.FirstName."));
         }
 
         [Test]
@@ -57,8 +59,7 @@ namespace FluentApiStudy
                 .When(() => person.FirstName = "Ryan");
             });
 
-            var expectedMessage = "Expected PropertyChanged event to fire for Person.LastName." +
-                                  " Expectation met for Person.FirstName.";
+            var expectedMessage = "Received notifications: Person.FirstName, Person.FullName. Expected Person.FirstName, Person.LastName.";
 
             Assert.That(ex.Message, Is.EqualTo(expectedMessage));
         }
@@ -89,7 +90,7 @@ namespace FluentApiStudy
                 .When(() => {/*Nothing happens*/});
             });
 
-            var expectedMessage = "Expected PropertyChanged event to fire for Person.FirstName, Person.LastName.";
+            var expectedMessage = "Received notifications: (none). Expected Person.FirstName, Person.LastName.";
 
             Assert.That(ex.Message, Is.EqualTo(expectedMessage));
         }
