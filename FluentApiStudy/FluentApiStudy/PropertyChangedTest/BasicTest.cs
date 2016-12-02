@@ -1,8 +1,8 @@
+using FluentApiStudy.Models;
 using FluentApiStudy.PropertyChanged;
 using NUnit.Framework;
-using System;
 
-namespace FluentApiStudy.UnitTest
+namespace FluentApiStudy.PropertyChangedTest
 {
     [TestFixture]
     public sealed class BasicTest

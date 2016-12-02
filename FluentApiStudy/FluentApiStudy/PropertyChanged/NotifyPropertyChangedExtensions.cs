@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Linq.Expressions;
+using FluentApiStudy.Utils;
 
 namespace FluentApiStudy.PropertyChanged
 {

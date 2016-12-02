@@ -47,19 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExpressionUtilities.cs" />
+    <Compile Include="Utils\ExpressionUtilities.cs" />
     <Compile Include="PropertyChanged\ExclusiveExpectation.cs" />
     <Compile Include="PropertyChanged\NegativePropertyChangedExpectation.cs" />
     <Compile Include="PropertyChanged\NotifyPropertyChangedExtensions.cs" />
-    <Compile Include="Person.cs" />
-    <Compile Include="UnitTest\ArgumentValidationTests.cs" />
-    <Compile Include="UnitTest\BasicTest.cs" />
+    <Compile Include="Models\Person.cs" />
+    <Compile Include="PropertyChangedTest\ArgumentValidationTests.cs" />
+    <Compile Include="PropertyChangedTest\BasicTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyChanged\PositivePropertyChangedExpectation.cs" />
     <Compile Include="PropertyChanged\PropertyChangedExpectationBase.cs" />
-    <Compile Include="UnitTest\ExclusiveTests.cs" />
-    <Compile Include="UnitTest\PositiveNegativeTests.cs" />
+    <Compile Include="PropertyChangedTest\ExclusiveTests.cs" />
+    <Compile Include="PropertyChangedTest\PositiveNegativeTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

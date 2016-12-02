@@ -1,7 +1,7 @@
 using System;
 using System.Linq.Expressions;
 
-namespace FluentApiStudy
+namespace FluentApiStudy.Utils
 {
     public static class ExpressionUtilities
     {

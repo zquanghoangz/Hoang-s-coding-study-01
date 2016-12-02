@@ -2,8 +2,9 @@
 using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.CompilerServices;
+using FluentApiStudy.Utils;
 
-namespace FluentApiStudy
+namespace FluentApiStudy.Models
 {
     public class Person : INotifyPropertyChanged
     {
