@@ -45,9 +45,14 @@ namespace FluentApiStudy.PropertyChanged
                 .ToArray();
 
             return new NegativePropertyChangedExpectation<T>(
-                _subject, 
-                _expectedProps, 
+                _subject,
+                _expectedProps,
                 newPropertyNames);
+        }
+
+        public ExclusiveExpectation<T> AndNothingElse()
+        {
+            return new ExclusiveExpectation<T>(_subject, _expectedProps);
         }
     }
 }

@@ -24,6 +24,13 @@ namespace FluentApiStudy.PropertyChanged
             _subject = subject;
             _expectedProps = expected;
             _nonExpectedProps = notExpected;
+
+            var conflicts = _expectedProps.Intersect(_nonExpectedProps).ToArray();
+            if (conflicts.Any())
+            {
+                throw new ArgumentException("Cannot specify properties for both positive and negative verification. " +
+                      $"Conflicting properties: {FormatNames(conflicts)}");
+            }
         }
 
         public void When(Action action)

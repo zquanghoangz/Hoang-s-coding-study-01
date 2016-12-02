@@ -31,22 +31,7 @@ namespace FluentApiStudy.UnitTest
             person.ShouldNotifyFor(x => x.FirstName)
                 .When(() => person.FirstName = "Ryan");
         }
-
-        // TODO: if the expression isn't a simple property access
-        [Test]
-        public void NonPropertyExpression_Exception()
-        {
-            var person = new Person();
-
-            var ex = Assert.Throws<ArgumentException>(() =>
-                person.ShouldNotifyFor(x => "not a property expression")
-            );
-
-            Assert.That(
-                ex.Message,
-                Is.EqualTo("Expression must be a simple property access of the form \"x => x.PropertyName\"."));
-        }
-
+        
         [Test]
         public void MultipleProperties_AssertFail()
         {
